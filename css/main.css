@@ -1,0 +1,322 @@
+/* body {
+	padding: 25px;
+} */
+
+/* h1 {
+	font-family: Oswald, sans-serif;
+	font-size: 4em;
+  margin-top: 0;
+  display: inline-block;
+} */
+div.links-panel {
+  display: inline-block;
+  float: right;
+  margin-top: 40px;
+}
+a.download-button {
+  text-decoration: none;
+  color: white;
+  background: #3B5998;
+  padding: 15px 35px;
+  font-family: Oswald, sans-serif;
+  font-size: 1.2em;
+  border-radius: 44px;
+}
+
+a.github-button {
+  text-decoration: none;
+  color: #999;
+  background: #333;
+  padding: 15px 35px;
+  font-family: Oswald, sans-serif;
+  font-size: 1.2em;
+  border-radius: 44px;
+  margin-right: 15px;
+}
+
+a.download-button:hover {
+/* //  background-color: #355088; */
+  background-color: rgba(59,89,152,0.3);
+}
+
+a.github-button:hover {
+  background-color: rgba(51,51,51,0.3);
+}
+
+p {
+	font-family: 'PT Sans', sans-serif;
+	line-height: 150%;
+}
+.control-panel {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: #000;
+  font-family: Oswald, sans-serif;
+  border: 2px solid black;
+  background-color: rgba(255,255,255,0.2);
+}
+
+.control-panel-label {
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.control-panel-input {
+  width: 40px;
+  display: inline-block;
+  padding: 12px;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1em;
+  border: 1px solid black;
+}
+
+.control-panel .on-off-group {
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+}
+.control-panel .on-off-group .control-panel-label {
+  vertical-align: top;
+  padding-top: 15px;
+  margin-right: 5px;
+}
+
+.control-panel .heading-group {
+  font-size: 1.8em;
+  text-align: center;
+  font-weight: 300;
+  display: inline-block;
+  width: 38%;
+  vertical-align: top;
+}
+
+.control-panel .spec-group {
+  display: inline-block;
+  width: 36%;
+  text-align: right;
+  vertical-align: top;
+}
+
+/**
+ * Toggle button rules
+ **/
+
+ .tgl {
+  display: none;
+}
+.tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
+  box-sizing: border-box;
+}
+.tgl::-moz-selection, .tgl:after::-moz-selection, .tgl:before::-moz-selection, .tgl *::-moz-selection, .tgl *:after::-moz-selection, .tgl *:before::-moz-selection, .tgl + .tgl-btn::-moz-selection {
+  background: none;
+}
+.tgl::selection, .tgl:after::selection, .tgl:before::selection, .tgl *::selection, .tgl *:after::selection, .tgl *:before::selection, .tgl + .tgl-btn::selection {
+  background: none;
+}
+.tgl + .tgl-btn {
+  outline: 0;
+  display: inline-block;
+  width: 7em;
+  height: 3em;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 45%;
+  height: 100%;
+}
+.tgl + .tgl-btn:after {
+  left: 0;
+}
+.tgl + .tgl-btn:before {
+  display: none;
+}
+.tgl:checked + .tgl-btn:after {
+  left: 55%;
+}
+
+.tgl-ios + .tgl-btn {
+  background: rgba(255,255,255,0.1);
+  border-radius: 0.5em;
+  padding: 2px;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+/* //  border: 1px solid #e8eae9; */
+}
+.tgl-ios + .tgl-btn:after {
+  border-radius: 0.5em;
+  background: #fafafa;
+  -webkit-transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+  transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+}
+.tgl-ios + .tgl-btn:hover:after {
+  will-change: padding;
+}
+.tgl-ios + .tgl-btn:active {
+  box-shadow: inset 0 0 0 2em #e8eae9;
+}
+.tgl-ios + .tgl-btn:active:after {
+  padding-right: .8em;
+}
+.tgl-ios:checked + .tgl-btn {
+  background: rgba(59,89,152,0.8)
+}
+.tgl-ios:checked + .tgl-btn:active {
+  box-shadow: none;
+}
+.tgl-ios:checked + .tgl-btn:active:after {
+  margin-left: -.8em;
+}
+
+h2 {
+
+  font-family: Oswald, sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+p.usage {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+pre {
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid black;
+  overflow: auto;
+}
+
+code {
+  line-height: 140%;
+}
+hr#end-line {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-content {
+  font-family: "PT Sans", sans-serif;
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+}
+
+.footer-content:last-child {
+  text-align: right;
+}
+
+.footer-content a.footer-product-link {
+  color: white;
+  text-decoration: none;
+  margin-right: 5px;
+}
+.footer-content a.footer-product-link:hover {
+  color: #551A8B;
+}
+
+.footer-content a.footer-personal-link {
+  text-decoration: none;
+}
+
+.footer-content a.footer-personal-link:hover {
+  text-decoration: underline;
+}
+
+
+@media screen and (max-width: 796px) {
+  body {
+    padding: 0;
+    padding-top: 25px;
+  }
+
+  h1 {
+    font-size: 3em;
+    width: 100%;
+    text-align: center;
+  }
+
+  div.links-panel {
+    margin-top: 0;
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  a.github-button {
+    margin-right: 5px;
+  }
+
+  a.github-button, a.download-button {
+    font-size: 1em;
+    width: 85px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  p {
+    text-align: center;
+    width: 100%;
+    margin-top: 25px;
+  }
+  .control-panel .on-off-group {
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+  .control-panel .heading-group {
+    display: none;
+  }
+
+  .control-panel .spec-group {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 423px) {
+  .control-panel .on-off-group {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .control-panel .heading-group {
+    text-align: center;
+    width: 48%;
+    display: inline-block;
+    margin-top: 50px;
+  }
+
+  .control-panel .spec-group {
+    width: 50%;
+    text-align: right;
+    display: inline-block;
+    margin-top: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
