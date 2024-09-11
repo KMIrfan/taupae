@@ -330,7 +330,7 @@ a:focus {
 
 .slider_section .detail-box p {
   width: 75%;
-  margin-top: 15px;
+  /* margin-top: 15px; */
 }
 
 .slider_section .detail-box .slider-link {
@@ -521,8 +521,8 @@ a:focus {
 }
 
 .about_section .detail-box p {
-  margin-top: 10px;
   margin-bottom: 35px;
+  font-size: 14px;
 }
 
 .about_section .detail-box a {
@@ -1042,30 +1042,8 @@ a:focus {
 }
 
 .Q-A-head{
-  font-size: 20px;
+  font-size: 18px;
 }
-
-
-
-
-/* small {
-  font-size: 75%;
-  color: #777;
-  font-weight: 400;
-}
-
-.container .title{
-  color: #3c4858;
-  text-decoration: none;
-  margin-top: 30px;
-  margin-bottom: 25px;
-  min-height: 32px;
-}
-
-.container .title h3{
-  font-size: 25px;
-  font-weight: 300;
-} */
 
 div.card {
   border: 0;
