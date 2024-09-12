@@ -1147,3 +1147,22 @@ div.card .card-header-primary {
   position: relative;
 }
 
+
+.image-container {
+  display: flex;
+  align-items: center; /* Vertically centers the images */
+}
+
+.with-line {
+  border-right: 1px solid #B5A595; 
+  padding-right: 18px; 
+  margin-right: 18px;
+}
+
+.image-container:last-child .with-line {
+  border-right: none; /* Remove the line from the last image */
+}
+
+::placeholder{
+  font-size: 14px;
+}

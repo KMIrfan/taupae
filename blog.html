@@ -24,6 +24,12 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+            <script>
+                // Initialize EmailJS with your user ID
+                emailjs.init("at1EirxcjKVhyrC8l"); // Replace YOUR_USER_ID with your actual user ID
+            </script>
+
 </head>
 
 <body>
@@ -179,56 +185,87 @@
         <div class="col-md-5">
           <div class="img-box">
             <img src="assets/images/Q&A (1).jpg" alt="" style="height: 550px;">
-
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="layout_padding2 about_section">
-    <div class="container">
+  <section class="layout_padding2 about_section m-2 p-3">
+    <div class="container m-md-5 m-2">
       <div class="row">
-        <div class="col-6">
-          <h4>
+        <div class="col-md-6 col-12">
+          <h1>
             CONTACT US
-            </h4>
+          </h1>
+            <div class="mt-5 px-5">
               <i class="fa fa-map-marker" aria-hidden="true"></i>
               <span>
-                &nbsp YASMIN LLC
+                &nbsp YASMIN LLC, SHARJAH, UAE
               </span>
-              <br>
-              &nbsp &nbsp &nbsp<span>SHARJAH, UAE</span>
-            </p>
-
-            <p>
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                &nbsp Call +9716 5342 544/737
-              </span>
-            </p>
-            <p>
-              <i class="fa fa-globe"></i>
-              <span>
-                &nbsp taupe.ae
-              </span>
-            </p>
-            <a href="https://wa.me/+9716 5342 544" target="_blank">
-              <i class="fa fa-whatsapp" aria-hidden="true"></i>Message Us
-            </a>
-
-          </div>
+              <p class="pt-4">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span class="pt-4">
+                  &nbsp Call +9716 5342 544/737
+                </span>
+              </p>
+              <p>
+                <i class="fa fa-globe"></i>
+                <span>
+                  &nbsp taupe.ae
+                </span>
+              </p>
+              <a href="https://wa.me/+9716 5342 544" class="text-decoration-none text-light" target="_blank">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>  &nbsp Message Us
+              </a>
+            </div>
+            <div class="mt-5 col-12 px-5">
+              <span>Looking for something else?</span>
+              <div class="d-flex">
+                <a href="https://wa.me/+97165342544" target="_blank">
+                  <button class="btn mt-2" style="background-color: #B5A595;color: #fff;">Start Chat <i class="fa fa-whatsapp"></i></button>
+                </a>
+              </div>
+            </div>
         </div>
-        <div class="col-6">
+        <div class="col-md-5 col-12 mt-5 mt-md-0">
 
+          <form id="mailForm">
+            <div class="row mt-2">
+              <div class="col-md-6 col-12">
+                <input class="form-control" placeholder="Enter your Name" type="text" id="fullName" name="fullName" required>
+              </div>
+        
+              <div class="col-md-6 col-12 mt-3 mt-md-0">
+                <input class="form-control" placeholder="Enter a valid email address" type="email" id="email" name="email" required>
+              </div>
+            </div>
+            
+            <input class="form-control mt-3" placeholder="Enter your phone" type="tel" id="contactNumber" name="contactNumber" required>
+        
+            <textarea class="form-control mt-3" placeholder="Enter your message" id="message" name="message" rows="4" required></textarea>
+        
+            <button class="btn mt-3 col-12" style="background-color: #B5A595; color: #fff;" type="submit">Send</button>
+          </form>
+        </div>
+          <script>
+            document.getElementById('mailForm').addEventListener('submit', function(event) {
+              event.preventDefault(); // Prevent the default form submission
+
+              // Send the form data to EmailJS
+              emailjs.sendForm('service_92plexi', 'template_et1nuoa', this)
+                  .then(function(response) {
+                      alert('Email sent successfully');
+                  }, function(error) {
+                      alert('Failed to send email');
+                  });
+            });
+          </script>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-  
-  
-
 
 
   <!-- <section class="about_section m-2">
@@ -350,157 +387,58 @@
     </div>
   </section> -->
 
-  <a href="mailto:irfanarimbra@gmail.com">Click to Send Email</a>
 
-
-  <!-- info section -->
-  <section class="info_section layout_padding2 p-5">
-    <div class="container">
-      <div class="row info_form_social_row">
-        <div class="col-md-8 col-lg-9">
-          <div class="info_form">
-            <form action="">
-              <input type="email" placeholder="Enter your email">
-              <button>
-                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-              </button>
-            </form>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-3">
-
-          <div class="social_box">
-            <img src="assets/images/Taupe Logo-ai nn.png" width="60%">
-
-            <!-- <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="https://wa.me/+9716 5342 544" target="_blank">
-              <i class="fa fa-whatsapp" aria-hidden="true"></i>
-            </a> -->
-          </div>
-        </div>
-      </div>
-      <div class="row info_main_row">
-        <div class="col-md-4">
-          <div class="info_links">
-            <h4>
-              Menu
-            </h4>
-            <div class="info_links_menu">
-              <a href="home.html">Home</a>
-              <a href="brand.html">Brand</a>
-              <a href="shop.html">Products</a>
-              <a href="clients.html">Clients</a>
-              <a href="blog.html">Contact us</a>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="col-md-6 col-lg-3">
-          <div class="info_insta">
-            <h4>
-              Instagram
-            </h4>
-            <div class="insta_box">
-              <div class="img-box">
-                <img src="images/p1.png" alt="">
-              </div>
-              <p>
-                long established fact that a reader
-              </p>
-            </div>
-            <div class="insta_box">
-              <div class="img-box">
-                <img src="images/p2.png" alt="">
-              </div>
-              <p>
-                long established fact that a reader
-              </p>
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="col-md-6 col-lg-3">
-          <div class="info_detail">
-            <h4>
-              About Us
-            </h4>
-            <p class="mb-0">
-              when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
-            </p>
-          </div>
-        </div> -->
-        <div class="col-md-4">
-          <h4>
-            Contact US
-          </h4>
-          <div class="info_contact">
-            <p>
-              <span>
-                MUNEER
-              </span>
-              <br>
-              <span>+97155 4078 004</span>
-            </p>
-
-            <p>
-              <span>
-                FARHAN
-              </span>
-              <br>
-              <span>+97155 9747 125</span>
-            </p>
-            <p>
-              <span>
-                IRSHAD
-              </span>
-              <br>
-              <span>+97158 6591 937</span>
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <h4>
-            REACH US
-          </h4>
-          <div class="info_contact">
-            <p>
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span>
-                &nbsp YASMIN LLC
-              </span>
-              <br>
-              &nbsp &nbsp &nbsp<span>SHARJAH, UAE</span>
-            </p>
-
-            <p>
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                &nbsp Call +9716 5342 544/737
-              </span>
-            </p>
-            <p>
-              <i class="fa fa-globe"></i>
-              <span>
-                &nbsp taupe.ae
-              </span>
-            </p>
-            <a href="https://wa.me/+9716 5342 544" target="_blank">
-              <i class="fa fa-whatsapp" aria-hidden="true"></i>Message Us
-            </a>
-
-          </div>
+<!-- <section class="info_section layout_padding m-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex flex-column align-items-center text-center" style="color: #B5A595;">
+        <img src="assets/images/Taupe Logo-ai nn.png" width="20%" />
+        <div class="mt-2 mb-3">Contact us</div>
+        <span>YASMIN LLC, SHARJAH, UAE</span>
+        <div class="d-flex align-items-center mt-1">
+          <img src="assets/images/call.svg" style="margin-right: 8px;" />
+          <span>+9716 5342 544/737</span>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- end info_section -->
+    <div class="row justify-content-center mt-3" style="color: #B5A595;">
+      <div class="col-md-2 col-4 text-center">
+        <span>MUNEER</span><br />
+        <span>+97155 4078 004</span>
+      </div>
+      <div class="col-md-2 col-4 text-center">
+        <span>FARHAN</span><br />
+        <span>+97155 9747 125</span>
+      </div>
+      <div class="col-md-2 col-4 text-center">
+        <span>IRSHAD</span><br />
+        <span>+97158 6591 937</span>
+      </div>
+    </div>
+    <div class="row justify-content-center" style="color: #B5A595;">
+      <div class="col-5">
+        <hr style="background-color: #B5A595;">
+      </div>
+    </div>
+    <div class="row justify-content-center" style="color: #B5A595;">
+      <div class="col-5 d-flex justify-content-center text-center">
+        <div class="image-container">
+          <img src="assets/images/locaion.svg" class="with-line">
+        </div>
+        <div class="image-container">
+          <a href="blog.html">
+            <img src="assets/images/mail.svg" class="with-line">
+          </a>
+        </div>
+        <div class="image-container">
+          <a href="https://wa.me/+97165342544" target="_blank">
+            <img src="assets/images/whatsapp.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
 
 
   <!-- footer section -->
