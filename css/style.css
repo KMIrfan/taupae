@@ -1166,3 +1166,35 @@ div.card .card-header-primary {
 ::placeholder{
   font-size: 14px;
 }
+
+.send-button{
+  background-color: #B5A595;
+  color: #fff;
+}
+
+.send-button:hover{
+  background-color: #908172;
+  color: #fff;
+}
+
+.custom-card img {
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.card-text {
+  transition: font-weight 0.1s ease-in-out;
+  color: #fff;
+  font-size: 20px;
+}
+
+.custom-card:hover img {
+  opacity: 0.8; 
+  transform: scale(1.04);
+}
+
+.custom-card:hover ~ .text-center .card-text {
+  font-weight: bold; 
+  color: #fff;
+}
+
